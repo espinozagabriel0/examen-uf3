@@ -1,103 +1,274 @@
 import Image from "next/image";
 
+import { Button } from "@/components/ui/button";
+
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <section id="hero" className="text-center py-35 px-2 space-y-4">
+        <div className="max-w-[672px] mx-auto flex items-center flex-col gap-4">
+          <h1 className="text-[48px] font-[800] leading-[48px]">
+            Information you need during on-call emergencies
+          </h1>
+          <p className="text-[#D9D9D9]">
+            Quickly link new on-call tickets to similar past incidents and their
+            solutions. All directly in Slack the moment an incident happens.
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Button className="bg-[#FAFAFA] text-[#18181b] mt-3">
+          Get Started
+          <svg
+            aria-hidden="true"
+            width="6"
+            height="10"
+            viewBox="0 0 6 10"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 9L5 5L1 1"
+              stroke="black"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </Button>
+
+        <div className="max-w-[1024px] mx-auto mt-5">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            className="w-full"
+            src="/images/hero-icon.png"
+            width={500}
+            height={500}
+            alt="Hero Section Image"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        </div>
+      </section>
+      {/* // */}
+      <section id="" className="max-w-[960px] mx-auto">
+        <h2 className="text-4xl font-bold text-center mb-4">
+          Quick solutions, less stress
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-2 ">
+          <div className="p-4 flex flex-col items-start gap-2">
+            <svg
+              width="56"
+              aria-hidden="true"
+              height="57"
+              viewBox="0 0 56 57"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="0.5"
+                y="1.03516"
+                width="55"
+                height="55"
+                rx="5.5"
+                fill="#09090B"
+              />
+              <rect
+                x="0.5"
+                y="1.03516"
+                width="55"
+                height="55"
+                rx="5.5"
+                stroke="#27272A"
+              />
+              <path
+                d="M26 18.5352H30"
+                stroke="#D9D9D9"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M28 30.5352L31 27.5352"
+                stroke="#D9D9D9"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M28 38.5352C32.4183 38.5352 36 34.9534 36 30.5352C36 26.1169 32.4183 22.5352 28 22.5352C23.5817 22.5352 20 26.1169 20 30.5352C20 34.9534 23.5817 38.5352 28 38.5352Z"
+                stroke="#D9D9D9"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            <h3 className="text-2xl font-semibold">Fix emergencies fast</h3>
+            <p className="text-[#D9D9D9]">
+              Save 20-30 minutes per on-call ticket - no more searching for
+              relevant issues and runbooks
+            </p>
+          </div>
+          <div className="p-4 flex flex-col items-start gap-2">
+            <svg
+              aria-hidden="true"
+              width="56"
+              height="57"
+              viewBox="0 0 56 57"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="0.5"
+                y="1.03516"
+                width="55"
+                height="55"
+                rx="5.5"
+                fill="#09090B"
+              />
+              <rect
+                x="0.5"
+                y="1.03516"
+                width="55"
+                height="55"
+                rx="5.5"
+                stroke="#27272A"
+              />
+              <path
+                d="M37 32.5352L33 36.5352L29 32.5352"
+                stroke="#D9D9D9"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M33 36.5352V20.5352"
+                stroke="#D9D9D9"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M19 24.5352L23 20.5352L27 24.5352"
+                stroke="#D9D9D9"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M23 20.5352V36.5352"
+                stroke="#D9D9D9"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            <h3 className="text-2xl font-semibold">Universally compatible</h3>
+            <p className="text-[#D9D9D9]">
+              Works with PagerDuty, Jira, or custom Slack alerts—Pandem
+              integrates with any system
+            </p>
+          </div>
+          <div className="p-4 flex flex-col items-start gap-2">
+            <svg
+              width="56"
+              height="57"
+              aria-hidden="true"
+              viewBox="0 0 56 57"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="0.5"
+                y="1.03516"
+                width="55"
+                height="55"
+                rx="5.5"
+                fill="#09090B"
+              />
+              <rect
+                x="0.5"
+                y="1.03516"
+                width="55"
+                height="55"
+                rx="5.5"
+                stroke="#27272A"
+              />
+              <path
+                d="M37 32.5352L33 36.5352L29 32.5352"
+                stroke="#D9D9D9"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M33 36.5352V20.5352"
+                stroke="#D9D9D9"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M19 24.5352L23 20.5352L27 24.5352"
+                stroke="#D9D9D9"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M23 20.5352V36.5352"
+                stroke="#D9D9D9"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            <h3 className="text-2xl font-semibold">Secure for your org</h3>
+            <p className="text-[#D9D9D9]">
+              We keep your data safe by taking top security measures.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* // */}
+      <section className="max-w-[672px] mx-auto mt-25 px-2 text-center">
+        <h2 className="text-4xl font-bold text-center ">
+          Instant setup, no custom code
+        </h2>
+        <p className="text-[#D9D9D9] my-4">
+          Invite the bot, pick a channel, and you&apos;re set—no custom code
+          needed, and no vendor lock-in.
+        </p>
+        <div>
           <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+            className="w-full"
+            src="/images/hero-icon.png"
+            width={500}
+            height={500}
+            alt="Instant setup section image"
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </div>
+      </section>
+      {/*  */}
+      <section className="mt-5 pt-15 pb-30 text-center max-w-[672px] mx-auto flex flex-col items-center gap-3">
+        <h2 className="text-4xl font-bold text-center ">Get in touch</h2>
+        <p className="text-[#D9D9D9]">Request a demo, or hop on a call.</p>
+        <Button className="bg-[#FAFAFA] text-[#18181b] mt-3">
+          Get Started
+          <svg
+            aria-hidden="true"
+            width="6"
+            height="10"
+            viewBox="0 0 6 10"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 9L5 5L1 1"
+              stroke="black"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </Button>
+      </section>
+    </>
   );
 }
