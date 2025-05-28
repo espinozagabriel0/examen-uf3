@@ -2,7 +2,7 @@ import { Button } from "./ui/button";
 
 export default function Header() {
   return (
-    <header className="flex justify-between items-center px-2 py-3">
+    <header className="flex justify-between items-center px-2 py-4">
       <div>
         <nav className="flex items-center gap-2">
           <svg
