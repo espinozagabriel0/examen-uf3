@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="flex justify-between items-center px-2 py-3">
+    <footer className="flex justify-between items-center px-2 py-3 flex-wrap">
       <div className="flex items-center gap-2">
         <svg
           width="20"
